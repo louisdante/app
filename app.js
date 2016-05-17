@@ -19,17 +19,33 @@
 */
 
 class NotesApplication{
-	var notes:str =[];
+	var notes ={
+		
+		
+	};
 
 	constructor(author){
-		this.author =author;
+		this.author = author;
 
 	}
 	create(note_content){
-		this.notes = note_content;
+		this.notes.push = note_content;
+		this.author
 	}
 	listNotes(){
-		
+
+	}
+	get(note_id){
+
+	}
+	search(search_text){
+
+
+		console.log("Showing results for search '[<search_text>]'");
+	}
+	delete(note_id){}
+	edit(note_id,new_content ){
+
 	}
 
 }
