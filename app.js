@@ -19,9 +19,7 @@
 */
 
 class NotesApplication{
-	
-	var note = [];
-	var notes.push = [note];
+	var notes =[];
 
 	constructor(author){
 		this.author = author;
@@ -32,11 +30,27 @@ class NotesApplication{
 		this.author
 	}
 	listNotes(){
-		for (var i = 0; i <= notes.length; i++) {
-			console.log(notes[i]);
-		};
+		for (var i = Things.length - 1; i >= 0; i--) {
+			
+		
+			for (var i in notes) {
+				console.log("note ID: " + note_id
+			 	+ "\n"+ note_content+"\n\n"+"By Author "+this.author);
+			}
+		}	
 	}
 	get(note_id){
+		 
+
+		 if (node_id == key){
+
+		 	return note_content;
+		 }else{
+
+		 	console.log("id not found");
+		 }
+			
+		
 
 	}
 	search(search_text){
