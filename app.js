@@ -5,33 +5,24 @@ var NotesApplication = function(author){
 
 
 }
-NotesApplication.prototype.create(note_content){
+NotesApplication.prototype.create = function (note_content){
 		this.notes.push(note_content);
 		
 	}
-NotesApplication.prototype.listNotes(){
+	
+NotesApplication.prototype.listNotes = function (){
 		for (var i = 0; i < this.notes.length; i++) {
 						
 				console.log("note ID: " + i
 			 	+ "\n"+ this.notes[i]+"\n\n"+"By Author " + this.author);
 		}	
 	}
-NotesApplication.prototype.get(note_id){
+NotesApplication.prototype.get = function (note_id){
 		 
 		 return this.notes[note_id];
 
-		/* if (node_id == key){
-
-		 	return note_content;
-		 }else{
-
-		 	console.log("id not found");
-		 }*/
-			
-		
-
 	}
-NotesApplication.prototype._search(search_text){
+NotesApplication.prototype._search =function (search_text){
 
 
 		console.log("Showing results for search "+search_text);
@@ -46,7 +37,7 @@ NotesApplication.prototype._search(search_text){
 		}
 
 	}
-NotesApplication.prototype._delete(note_id){
+NotesApplication.prototype._delete = function(note_id){
 	if(note_id > this.notes.length || note_id < 0){
 		return "the number entered doesnt exit";
 	}else{
@@ -55,7 +46,10 @@ NotesApplication.prototype._delete(note_id){
 	}
 
 }
-NotesApplication.prototype.edit(note_id,new_content ){
+NotesApplication.prototype.edit = function(note_id,new_content ){
 	this.notes[note_id] = new_content;
 	}
 
+var note = new NotesApplication("louis");
+note.create("this is a test");
+note.listNotes();
