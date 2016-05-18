@@ -19,10 +19,9 @@
 */
 
 class NotesApplication{
-	var notes ={
-		
-		
-	};
+	
+	var note = [];
+	var notes.push = [note];
 
 	constructor(author){
 		this.author = author;
@@ -33,7 +32,9 @@ class NotesApplication{
 		this.author
 	}
 	listNotes(){
-
+		for (var i = 0; i <= notes.length; i++) {
+			console.log(notes[i]);
+		};
 	}
 	get(note_id){
 
@@ -50,3 +51,7 @@ class NotesApplication{
 
 }
 	
+List<String> strList = new ArrayList<String>();
+strList.add("23-2-2016");
+strList.add("24-2-2016");
+strList.add("25-2-2016");
