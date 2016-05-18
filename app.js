@@ -1,3 +1,4 @@
+require('');
 var NotesApplication = function(author){
 
 	this.author = author;
