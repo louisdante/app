@@ -18,11 +18,25 @@ NotesApplication.prototype.listNotes = function (){
 			 	+ "\n"+ this.notes[i]+"\n\n"+"By Author " + this.author);
 		}	
 	}
-NotesApplication.prototype.get = function (note_id){
-		 
-		 return this.notes[note_id];
+ NotesApplication.prototype.get = function(note_id)
+  {
+  	if(typeof(note_content) == typeof(0))
+  	{
+      if(note_id < this.notes.length)
+      {
+        return this.notes[note_id];
+      }
+      else
+      {
+        return "Out of range."
+      }
+  	}
+  	else
+  	{
+  		return "That type is invalid. index has to be an integer value, try again.";
+  	}
 
-	}
+  }
 NotesApplication.prototype._search =function (search_text){
 
 
