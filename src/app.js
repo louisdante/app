@@ -1,4 +1,3 @@
-require('');
 var NotesApplication = function(author){
 
 	this.author = author;
@@ -8,6 +7,7 @@ var NotesApplication = function(author){
 }
 NotesApplication.prototype.create = function (note_content){
 		this.notes.push(note_content);
+		return "created";
 		
 	}
 	
